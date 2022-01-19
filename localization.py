@@ -139,10 +139,3 @@ def save_anomaly_map(image, hmap, save_path):
 
 
 
-L = Localize('./weights-bottle.ckpt')
-sp = L.patch_scores('./bottle/train/', './bottle/test/broken_large/004.png')
-GS = Gaussian_smoothing()
-up = GS.upsample(sp)
-visualize_heatmap('./bottle/test/broken_large/004.png', up)
-
-
